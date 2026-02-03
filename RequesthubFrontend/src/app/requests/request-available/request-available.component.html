@@ -1,0 +1,30 @@
+<div class="open-requests-section">
+  <h2>Open Requests</h2>
+  <ul class="open-requests-list">
+    @for (request of openRequests; track request.id) {
+    <li class="open-request-item" [ngClass]="priorityClass(request)">
+      <app-request-card [request]="request"></app-request-card>
+    </li>
+    }
+  </ul>
+</div>
+<div class="in-progress-requests-section">
+  <h2>In Progress Requests</h2>
+  <ul class="in-progress-requests-list">
+    @for (request of inProgressRequests; track request.id) {
+    <li class="in-progress-request-item" [ngClass]="priorityClass(request)">
+        <app-request-card [request]="request"></app-request-card>
+    </li>
+    }
+  </ul>
+</div>
+<div class="closed-requests-section">
+  <h2>Closed Requests</h2>
+  <ul class="closed-requests-list">
+    @for (request of closedRequests; track request.id) {
+    <li class="closed-request-item" [ngClass]="priorityClass(request)">
+      <app-request-card [request]="request"></app-request-card>
+    </li>
+    }
+  </ul>
+</div>
